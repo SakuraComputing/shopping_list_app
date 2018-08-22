@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Dashboard from './components/Dashboard'
+import Shopping from './components/Shopping'
 
 class App extends Component {
   render() {
@@ -11,7 +11,7 @@ class App extends Component {
 
           <h1 className="App-title">Shopping List Application</h1>
         </header>
-        <Dashboard />
+        <Shopping />
       </div>
     );
   }
