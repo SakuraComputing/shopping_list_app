@@ -4,41 +4,51 @@ import ListItem from './ListItem';
 class Dashboard extends React.Component {
 
     state = { 
-        list: [
-
-        ]
-     }
-
-     input = React.createRef();
-
-
-    onChange = () => {
-        console.log('On Chnage');
+        list: []
     }
+
+    input = React.createRef();
 
     onSubmit = (e) => {
         e.preventDefault();
         this.setState({
             list: [...this.state.list, this.input.current.value]
         })
+        this.input.current.value = "";
+    }
+
+    deleteItem = (id) => {
+        console.log('On Delete');
+        this.setState(({ list }) => ({
+            list: list.filter((item, index) => index !== id)        
+        }));
     }
 
     render() { 
 
-        console.log("Form render", this.state.list);
-
         return (  
 
-            <div>Shopping List
+            <div>
                 <form onSubmit={this.onSubmit}>
-                    <input ref={this.input} type="text" onChange={this.onChange}/>
+                    <input className="input-box" 
+                            placeholder="Add Shopping Item Here"
+                            ref={this.input} 
+                            type="text" 
+                            onChange={this.onChange}/>
                 </form>
-                <ListItem items={this.state.list} />
+                <ul>
+                    {
+                        this.state.list.map((item, key) => 
+                            <ListItem 
+                                key={key}
+                                item={item} 
+                                deleteItem={this.deleteItem.bind(this, key)}
+                            />)    
+                    }
+                </ul>
             </div>    
-
         );
     }
 }
- 
 export default Dashboard;
 
