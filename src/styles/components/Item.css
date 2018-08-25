@@ -1,0 +1,21 @@
+.item {
+    font-size: 185%;
+    color: var(--main-black-color);
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+  
+.item-button {
+    background-color: var(--main-purple-color);
+    color: #f3f3f3;
+    border: solid 2px var(--main-black-color);
+    border-radius: 5px;
+    padding: 10px;
+    float: right;
+    margin-right: 300px;
+}
+
+.item-button:hover {
+    background-color: black;
+}
+  

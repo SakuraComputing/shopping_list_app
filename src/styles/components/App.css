@@ -19,33 +19,17 @@
   font-size: large;
 }
 
-.input-box {
-  border: solid 2px black;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 20px;
-  font-size: 100%;
-  width: 250px;
-}
-
-.item {
-  font-size: 185%;
-  color: black;
-  list-style-type: none;
-  margin-bottom: 10px;
-}
-
-.item-button {
-  background-color: gray;
-  color: #fff;
-  border: solid 2px black;
-  border-radius: 5px;
-  padding: 10px;
+.App-basket {
+  font-size: 1.2em;
   float: right;
-  margin-right: 300px;
+  padding-top: 15px;
 }
 
-.item-button:hover {
-  background-color: black;
+.ao-header-logo {
+  height: 70px;
+  width: 180px;
+  float: left;
 }
+
+
 

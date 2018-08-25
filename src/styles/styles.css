@@ -1,3 +1,5 @@
 @import './base/Base.css';
 @import './components/App.css';
 @import './components/menu.css';
+@import './components/Shopping.css';
+@import './components/Item.css';
