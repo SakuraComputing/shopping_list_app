@@ -6,8 +6,8 @@
 
 .App-header {
   background-color: var(--main-bg-color);
-  height: 50px;
-  padding: 20px;
+  height: 60px;
+  padding: 10px;
   color: var(--main-white-color);
 }
 
@@ -19,17 +19,61 @@
   font-size: large;
 }
 
-.App-basket {
-  font-size: 1.2em;
-  float: right;
-  padding-top: 15px;
-}
 
 .ao-header-logo {
+  padding-left: 40px;
   height: 70px;
   width: 180px;
   float: left;
 }
 
+ion-icon {
+  font-size: 30px;
+}
 
+.header-grid {
+  display: grid;
+  grid-template-columns: 1px 180px 350px 200px 50px 10px;
+  margin-top: 12px;
+}
+
+.header-grid-item {
+  text-align: center;
+
+}
+
+.header-grid-text {
+  margin-top: 10px;
+}
+
+.header-grid-icon {
+  padding-top: 5px;
+}
+
+.header-grid-search {
+  padding: 8px;
+  width: 300px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.header-grid-search-icon {
+  position: absolute;
+  left: 705px;
+  color: var(--main-bg-color);
+  padding-top: 2px;
+}
+
+.header-grid-person-icon {
+  position: absolute;
+  left: 770px;
+}
+
+.header-grid-item-basket {
+  padding-top: 10px;
+}
+
+.header-grid-basket-icon {
+  position: absolute;
+}
 

@@ -19,18 +19,36 @@ class Dashboard extends React.Component {
                 desc: this.input.current.value
             }])
         })
-        console.log(this.state.list);
+        localStorage.setItem(uuid, this.input.current.value);
         this.input.current.value = "";
     }
 
     deleteItem = (id) => {
-        this.setState(({ list }) => ({
-            list: list.filter((item, index) => index !== id)        
-        }));
+        console.log('Is it getting in here', id);
+        this.setState({
+            list: this.state.list.filter((item) => item.id !== id)        
+        });
+        localStorage.removeItem(id);
     }
 
     getUUID() {
         return uuid();
+    }
+
+    componentDidMount() {
+
+        let newList = [];
+        let storageCount = localStorage.length;
+
+        while ( storageCount-- ) {
+            let lsKey = localStorage.key(storageCount);
+            let lsItem = localStorage.getItem(lsKey);
+            newList.push({ id: lsKey, desc: lsItem });
+        }
+
+        this.setState({
+            list: newList
+        })
     }
 
     render() { 
@@ -51,7 +69,7 @@ class Dashboard extends React.Component {
                             <ListItem 
                                 key={item.id}
                                 item={item.desc} 
-                                deleteItem={() => this.deleteItem.bind(item.id)}
+                                deleteItem={() => this.deleteItem(item.id)}
                             />)    
                     }
                 </ul>
