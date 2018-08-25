@@ -1,14 +1,14 @@
 .App {
   text-align: center;
-  background-color: cornsilk;
+  background-color: var(--main-bg-color);
   height: 1000px;
 }
 
 .App-header {
-  background-color: #222;
+  background-color: var(--main-bg-color);
   height: 50px;
   padding: 20px;
-  color: white;
+  color: var(--main-white-color);
 }
 
 .App-title {

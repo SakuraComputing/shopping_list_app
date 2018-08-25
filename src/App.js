@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles/styles.css';
+import Menu from './components/Menu';
 import Shopping from './components/Shopping'
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
 
           <h1 className="App-title">Shopping List</h1>
         </header>
+        <Menu />
         <Shopping />
       </div>
     );
